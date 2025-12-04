@@ -1,0 +1,250 @@
+@font-face {
+    font-family: "Minecraftia";
+    src: url("./fonts/Minecraftia-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Inter";
+    src: url("./fonts/Inter-Variable.ttf") format("truetype");
+    font-style: normal;
+}
+
+:root {
+    --main-color: #3F79C8;
+}
+body {
+    font-family: Inter, sans-serif;
+    background-color: #030A1A;
+    height: 100vh;
+    margin: 0;
+    padding: 0 calc(50% - 720px);
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+h2, h3, p {
+    margin: 0;
+}
+.wrapper {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 374px 1fr 374px;
+    grid-template-rows: auto 1fr auto;
+
+}
+
+.btn {
+    font-family: Minecraftia, monospace;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 40px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 56px;
+    padding: 0 40px;
+    width: max-content;
+    box-sizing: border-box;
+    cursor: pointer;
+    mask-image: url("./images/vectors/mask.svg");
+    mask-size: 100% ;
+    background-color: #3F79C8;
+    text-transform: uppercase;
+}
+.left {
+    grid-row-end: span 3;
+    background-color: #031022;
+    padding: 137px 60px 42px;
+    display: grid;
+    gap: 16px;
+    align-content: flex-start;
+    grid-template-rows: auto auto 1fr;
+}
+.left .nav {
+    margin-top: 20px;
+    gap: 20px;
+    display: grid;
+    overflow: hidden;
+    align-content: flex-start;
+    height: 100%;
+}
+
+.nav-date {
+    font-family: Minecraftia, monospace;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 40px;
+    color: #fff;
+    width: 234px;
+    display: grid;
+    position: relative;
+    gap: 10px;
+}
+.nav-date>span {
+    display: flex;
+    padding: 0 14px;
+}
+
+.nav-date>ul {
+    display: none;
+}
+.nav-date.active>ul {
+    display: grid;
+}
+.nav-date::after {
+    content: url(./images/vectors/arrow.svg);
+    transform: rotate(180deg);
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+.nav-date.active::after {
+    transform: rotate(0deg);
+}
+.nav-time {
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    height: 33px;
+    display: flex;
+    padding: 0 14px;
+    align-items: center;
+}
+.nav-time.active {
+    background-color: #142343;
+}
+
+.user {
+    padding-left: 23px;
+    grid-column-start: 3;
+    height: 126px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.user_1 {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+.user_1 span {
+    font-family: Minecraftia, monospace;
+    color: #C1852A;
+    font-size: 16px;
+
+    line-height: 10px;
+}
+.user_2 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: url("./images/user.png");
+    background-position: center;
+    background-size: 150%;
+}
+.name {
+    color: #fff;
+}
+
+.right {
+    padding-left: 23px;
+    grid-column-start: 3;
+    color: #fff;
+    display: grid;
+    grid-row-end: span 2;
+    gap: 45px;
+    height: 100%;
+    overflow: scroll;
+    box-sizing: border-box;
+}
+.right h2 {
+    font-family: Minecraftia, monospace;
+}
+.right h3 {
+    font-weight: normal;
+    font-size: 24px;
+}
+.right p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+.right p>span {
+    color: #C1852A;
+}
+
+.right a {
+    width: 100%;
+}
+.right .block {
+    display: grid;
+    gap: 16px;
+}
+.right .bottom {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.ta {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    height: 210px;
+    box-sizing: border-box;
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+textarea {
+    width: 100%;
+    height: 100%;
+    background-color: #3F79C833;
+    resize: none;
+    mask-image: url("./images/vectors/mask.svg");
+    mask-size: 100% ;
+    border: none;
+    outline: none;
+    padding: 27px 30px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 20px;
+    font-family: Inter, sans-serif;
+}
+.ta .btn {
+    position: absolute;
+    right: 49px;
+}
+
+.content {
+    width: 100%;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: span 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    height: 100%;
+    overflow: hidden;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    align-content: flex-start;
+}
+.content .pic {
+    width: 200px;
+    height: 200px;
+}
+.content img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+}
