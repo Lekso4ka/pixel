@@ -1,7 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 9">
-    <rect x="6" y="0" width="12" height="3" fill="#031022"/>
-    <rect x="3" y="3" width="6" height="3" fill="#031022"/>
-    <rect x="15" y="3" width="6" height="3" fill="#031022"/>
-    <rect x="0" y="6" width="6" height="3" fill="#031022"/>
-    <rect x="18" y="6" width="6" height="3" fill="#031022"/>
+<svg xmlns="http://www.w3.org/2000/svg" height="100%" width="24">
+    <style>
+    .fill {
+        fill: black;
+    }
+    .no-fill {
+        fill: white;
+    }
+    .t {
+        transform: translate(0, -3px) scale(1,1);
+    }
+    .b {
+        transform: translate(0, 100% scale(1,-1);
+    }
+    </style>
+    <defs>
+    <mask id="arr">
+        <rect x="0" y="0" width="100%" height="100%" class="no-fill"/>
+        <g class="b fill">
+            <path d="M0,0h6v3h-6ZM6,0h12v3h-12ZM18,0h6v3h-6ZM0,3h3v3h-3ZM21,3h3v3h-3ZM3,3h6v3h-6ZM15,3h6v3h-6ZM0,6h6v3h-6ZM18,6h6v3h-6Z"/>
+        </g>
+        <g class="t fill">
+            <path d="M0,0h6v3h-6ZM6,0h12v3h-12ZM18,0h6v3h-6ZM0,3h3v3h-3ZM21,3h3v3h-3ZM3,3h6v3h-6ZM15,3h6v3h-6ZM0,6h6v3h-6ZM18,6h6v3h-6Z"/>
+        </g>
+    </mask>
+    </defs>
+    <rect width="100%" height="100%" class="fill" mask="url(#arr)"/>
 </svg>
