@@ -246,7 +246,7 @@ textarea {
     mask-size: 100% ;
     border: none;
     outline: none;
-    padding: 27px 30px;
+    padding: 27px 180px 27px 30px;
     box-sizing: border-box;
     color: #fff;
     font-size: 20px;
@@ -346,16 +346,4 @@ textarea {
 .left .scroll {
     padding: 0;
     overflow-x: visible;
-}
-
-@media screen and (max-width: 1360px) {
-    .ta {
-        height: max-content;
-        display: grid;
-        gap: 14px;
-    }
-    .ta .btn {
-        position: static;
-        justify-self: flex-end;
-    }
 }
