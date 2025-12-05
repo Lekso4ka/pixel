@@ -25,6 +25,13 @@ class Scrollbar {
             40,
             (containerHeight / contentHeight) * trackHeight
         );
+        if (containerHeight >= contentHeight) {
+            this.track.style.display = 'none';
+            this.thumb.style.display = 'none';
+        } else {
+            this.track.style.display = null;
+            this.thumb.style.display = null;
+        }
         this.thumb.style.height = `${thumbHeight}px`;
     }
     
