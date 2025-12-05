@@ -1,0 +1,39 @@
+.right
+    h2 Settings
+    #scroll1.scroll-block
+        .scroll
+            .block
+                div
+                    input.check(type="checkbox" id="check")
+                    label(for="check") Select all images
+                p 80 images
+            .block
+                h3 Style Power
+                div
+                    input.range(type="checkbox" id="range")
+                    label(for="range")
+                p
+                    |+&#32;
+                    span 2 Tockens
+                    |&#32;per photo
+            .block
+                h3 Details
+                div
+                    input.switch(type="checkbox" id="switch2")
+                    label(for="switch2")
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 7.50021L4.5 7.50021L4.5 4.50021L7.5 4.50021L7.5 1.50021L16.5 1.50021L16.5 4.50021L19.5 4.50021L19.5 7.50021L22.5 7.50021L22.5 16.5002L19.5 16.5002L19.5 19.5002L16.5 19.5002L16.5 22.5002L7.5 22.5002L7.5 19.5002L4.5 19.5002L4.5 16.5002L1.5 16.5002L1.5 7.50021Z" fill="#3F79C8" stroke="#3F79C8" stroke-width="3"/>
+                        </svg>
+                p
+                    | +&#32;
+                    span 6 Tockens
+                    | &#32;per photo
+                p.blue-text If the object contains many fine details, it’s better to enable this setting. The result will be more accurate but will increase token usage.
+                p
+                    | +&#32;
+                    span 0 Tockens
+                    | &#32;per photo
+        include ./scroll
+    .block.bottom
+        p Select images for generate
+        a.btn(href="") GENERATE
