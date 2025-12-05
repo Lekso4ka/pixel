@@ -174,7 +174,7 @@ h2, h3, p {
     height: 100%;
     box-sizing: border-box;
     grid-template-rows: auto 1fr auto;
-    align-content: flex-start;s
+    align-content: flex-start;
 }
 .right h2 {
     font-family: Minecraftia, monospace;
@@ -335,13 +335,17 @@ textarea {
 }
 .scroll-thumb>svg:first-child {
     position: absolute;
-    top: -1px;
+    top: 0px;
     left: -3px;
     right: -3px;
 }
+.scroll-thumb>svg {
+    width: 24px;
+    height: 9px;
+}
 .scroll-thumb>svg:last-child {
     position: absolute;
-    bottom: -1px;
+    bottom: 0px;
     left: -3px;
     right: -3px;
     transform: rotate(180deg);
