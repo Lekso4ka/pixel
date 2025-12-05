@@ -208,6 +208,7 @@ h2, h3, p {
     overflow-y: scroll;
     overflow-x: hidden;
     position: relative;
+    align-content: flex-start;
     padding-right: 40px;
 }
 .scroll-bar {

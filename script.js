@@ -33,6 +33,16 @@ class Scrollbar {
             this.thumb.style.display = null;
         }
         this.thumb.style.height = `${thumbHeight}px`;
+        const meta = document.querySelector("[name=\"viewport\"]");
+        
+        const data = meta.getAttribute("content");
+        if (window.innerWidth >= 1440) {
+            if (!data.includes("user-scalable=no")) {
+                meta.setAttribute("content", data + ",user-scalable=no");
+            }
+        }else {
+            meta.setAttribute("content", data.replace(",user-scalable=no", ""));
+        }
     }
     
     updateThumbPosition() {
@@ -75,3 +85,4 @@ class Scrollbar {
 
 new Scrollbar('scroll1');
 new Scrollbar('scroll2');
+
